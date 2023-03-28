@@ -1,5 +1,24 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Contact[] friends = new Contact[8];
+        friends[0] = new Contact("John\t", "Smith", "610-555-7384");
+        friends[1] = new Contact("Sarah", "Barnes", "215-555-3827");
+        friends[2] = new Contact("Mark\t", "Riley", "733-555-2969");
+        friends[3] = new Contact("Laura\t", "Getz", "663-555-3984");
+        friends[4] = new Contact("Larry", "Smith", "464-555-3489");
+        friends[5] = new Contact("Frank", "Phelps", "322-555-2284");
+        friends[6] = new Contact("Mario", "Guzman", "804-555-9066");
+        friends[7] = new Contact("Marsha", "Grant", "243-555-2837");
+
+        Sorting.selectionSort(friends);
+        System.out.println("*** Selection Sort ***");
+        for (Contact friend : friends)
+            System.out.println(friend);
+
+        Sorting.insertionSort(friends);
+        System.out.println();
+        System.out.println("*** Insertion Sort ***");
+        for (Contact friend : friends)
+            System.out.println(friend);
     }
 }
